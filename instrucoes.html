@@ -411,10 +411,29 @@
   });
 </script>
 
+  <script>
+  function verMais() {
+    const mais = document.getElementById("mais");
+    const dots = document.getElementById("dots");
+    const btn = document.getElementById("verMaisBtn");
+
+    if (mais.style.display === "none") {
+      mais.style.display = "inline";
+      dots.style.display = "none";
+      btn.textContent = "Ver menos";
+    } else {
+      mais.style.display = "none";
+      dots.style.display = "inline";
+      btn.textContent = "Ver mais";
+    }
+  }
+</script>
+
 </body>
 
 
 </html>
+
 
 
 
