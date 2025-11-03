@@ -303,9 +303,9 @@
     <div class="titulo">INSTRUÇÕES PLANILHA DE ORÇAMENTO</div>
 
     <div class="titulosetextos">
-    <div class="produtostxt"><h2>PRODUTOS</h2></div>
+    <div id="produtostxt" class="produtostxt"><h2>PRODUTOS</h2></div>
 
-    <div class="adprodutostxt"><h3>ADICIONAR PRODUTOS</h3></div>
+    <div id="adprodutostxt" class="adprodutostxt"><h3>ADICIONAR PRODUTOS</h3></div>
     <h4>
       "ADICIONAR PRODUTOS" serve para adicionar produtos temporarios que serão usados apenas uma vez, se a pagina for atualizada eles sumirar a menos que tenhão sidos exprotados em uma planilha o que faz com que voltem caso o orçamento salvo for improtado. para adicionar um produto temporario ser nesseçario colocar: 
       </p> Código (não e 100% nesseçario apenas que sejá com uma conta que envou outro produto exemplo "(((C[429] + A[429])*2 + (C[534] + A[534])*2) * 4) * Q * $" que e necessário o codigo do produto para puchar os valores),
@@ -314,40 +314,40 @@
       </p> Preço (preço que sera dado a o produto), Unidade: "UNID" "L" "ML" etc., Fórmula Use: Q=Quantidade, $=Preço, C=Comprimento, A=Largura
     </h4>
 
-    <div class="CSVtxt"><h2>CSV</h2></div>
+    <div id="csvtxt" class="CSVtxt"><h2>CSV</h2></div>
     <h4>
       "CSV" O CSV e uma planilha com as informações dos predutos a o criar uma planilha como essa com os produtos na sequencia (codigo,"nome",preço,"formula","unidade","pagina") você tera um CSV e quando importalo tera uma planlha toda customisada com os produtos descritos OBS.: o CSV não altera e nem cria paginas ele apenas adiciona produtos a elas
     </h4>
 
-    <div class="importarcsvtxt"><h3>INPORTAR CSV</h3></div>
+    <div id="importarcsvtxt" class="importarcsvtxt"><h3>INPORTAR CSV</h3></div>
     <h4>
       "importar CSV" Importar o CSV e facio porem deve se sertificar de que o csv esta correto (e recomendado que importe o CSV original da pagina e useo como base)
     </h4>
 
-    <div class="exportarcsvtxt"><h3>EXPORTAR CSV</h3></div>
+    <div id="exportarcsvtxt" class="exportarcsvtxt"><h3>EXPORTAR CSV</h3></div>
     <h4>
     Criar um CSV do zero não e uma escolha 100% pratica porem se você apenas busca uma forma de adicionar um produto a o CSV original basta adiicionar um produto temporario e logo apos exportar o CSV que o produto temporario estara catalogado emtão sempre que precisar deste produto basta importar novamente o CSV. </p>OBS.: a o importar um CSV a pagina e carregada sertifiquese de importar o CSV antes de importar o CSV.
     </h4>
 
-    <div class="resetarprodutostxt"><h3>RESETAR PRODUTOS</h3></div>
+    <div id="resetarprodutostxt" class="resetarprodutostxt"><h3>RESETAR PRODUTOS</h3></div>
     <h4>
       "RESETAR PRODUTOS" este botão serve para resetar todos os dados o produtos temporarios da pagina porem para evitar dores de cabeça apos apertado aparecera uma notificação para confirmar o resete da pagina (o mesmo não vale para o "resetar esta pagina" disponivel no crome nem mesmo para o ctrl+R)
     </h4>
 
-    <div class="pesquisartxt"><h3>PESQUISAR PRODUTOS</h3></div>
+    <div id="pesquisartxt" class="pesquisartxt"><h3>PESQUISAR PRODUTOS</h3></div>
     <h4>
       A melhor forma de procurar um prodduto
     </h4>
 
-    <div class="salvareexportartxt"><h2>SALVAR/IMPORTAR</h2></div>
+    <div id="salvareexportartxt" class="salvareexportartxt"><h2>SALVAR/IMPORTAR</h2></div>
 
-    <div class="salvartxt"><h3>SALVAR</h3></div>
+    <div id="salvartxt" class="salvartxt"><h3>SALVAR</h3></div>
 
-    <div class="importartxt"><h3>IMPORTAR</h3></div>
+    <div id="importartxt" class="importartxt"><h3>IMPORTAR</h3></div>
 
-    <div class="imprimirtxt"><h3>IMPPRIMIR</h3></div>
+    <div id="imprimirtxt" class="imprimirtxt"><h3>IMPPRIMIR</h3></div>
 
-    <div class="flutuantestxt"><h2>FLUTUANTES</h2> </div>     
+    <div id="flutuantestxt" class="flutuantestxt"><h2>FLUTUANTES</h2> </div>   
     </div>
 
 
@@ -356,12 +356,39 @@
   <div class="barra-transição"></div>
 
   <div class="cat">&gt;.<span class="blink">&lt;</span></div>
+  
+<script>
+  // Mapeia os botões para os IDs dos títulos
+  const links = {
+    "Produtos": "produtostxt",
+    "Adicionar Produto": "adprodutostxt",
+    "CSV": "csvtxt",
+    "Importar CSV": "importarcsvtxt",
+    "Exportar CSV": "exportarcsvtxt",
+    "Resetar Produtos": "resetarprodutostxt",
+    "Pesquisar Produto": "pesquisartxt",
+    "Salvar e Importar": "salvareexportartxt",
+    "Salvar": "salvartxt",
+    "Importar": "importartxt",
+    "Imprimir": "imprimirtxt",
+    "Flutuantes": "flutuantestxt"
+  };
 
+  document.querySelectorAll(".caixa-botoes button").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const alvo = links[btn.textContent.trim()];
+      if (alvo) {
+        document.getElementById(alvo).scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    });
+  });
+</script>
 
 </body>
 
 
 </html>
+
 
 
 
