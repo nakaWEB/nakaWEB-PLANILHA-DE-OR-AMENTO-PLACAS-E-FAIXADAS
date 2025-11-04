@@ -334,7 +334,7 @@
     não modifique o que não for necessario sujeito a paulada 
     <img src="./emoji.png" alt="ícone" width="16" height="16" style="vertical-align:middle;">
   </span>
-<a href="#" id="verMaisBtn" onclick="verMais(event)">Ver mais</a>
+<button id="verMaisBtn" type="button" onclick="verMais()">Ver mais</button>
 </h4>
 
     <div id="csvtxt" class="CSVtxt"><h2>CSV</h2></div>
@@ -421,8 +421,7 @@
   });
 
 
-function verMais(event) {
-  event.preventDefault(); // impede o link de "recarregar" a página
+function verMais() {
   const mais = document.getElementById("mais");
   const dots = document.getElementById("dots");
   const btn = document.getElementById("verMaisBtn");
@@ -437,6 +436,7 @@ function verMais(event) {
     btn.textContent = "Ver mais";
   }
 }
+
 
 </script>
 
