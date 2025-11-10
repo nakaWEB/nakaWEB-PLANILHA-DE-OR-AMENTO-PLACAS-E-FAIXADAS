@@ -1284,7 +1284,7 @@ PROD001,Produto Exemplo,10.50,Q * $,UNID,ESTRUTURA METALICA"></textarea>
                 { codigo: "9954", nome: "LAMBRI 2,5x1,1.", preco: 165, formula: "C * A * Q * $", unidade: "M" },
                 { codigo: "34469", nome: "LAMBRI 2x1,1.", preco: 165, formula: "C * A * Q * $", unidade: "M" },
                 { codigo: "55177", nome: "LAMBRI 3x1,1.", preco: 185, formula: "C * A * Q * $", unidade: "M" },
-                { codigo: "21", nome: "LÂMINA ESTILETE", preco: 0.7, formula: "Q * $", unidade: "UNID" },
+                { codigo: "21089", nome: "LÂMINA ESTILETE", preco: 0.7, formula: "Q * $", unidade: "UNID" },
                 { codigo: "89888", nome: "LIMPA CONTATO", preco: 31, formula: "Q * $", unidade: "UNID" },
                 { codigo: "11045", nome: "LIXADEIRA DEWALT", preco: 525, formula: "Q * $", unidade: "UNID" },
                 { codigo: "27827", nome: "LUVA VINIFLEX", preco: 1.7, formula: "Q * $", unidade: "UNID" },
@@ -2422,22 +2422,22 @@ function searchProducts() {
             };
 
             const total =
-                get('26013884') + // CA
-                get('2600881') + // RA
-                get('43588') + // IO
-                get('26013870') + // DE
-                get('26013869') + // CON
-                get('26013868') + // TA
-                get('2601387') + // DOS
-                get('2601158') + // IN
-                get('765') + // FER
-                get('26013867') + // NO
-                get('26013866') + // GRAN
-                get('26013865') + // DE
-                get('2601209') + // PRA
-                get('426') + // CA
-                get('2601023') + // CE
-                get('26013871');  // TE
+                get('32435') + // CA
+                get('25652') + // RA
+                get('40524') + // IO
+                get('28618') + // DE
+                get('46684') + // CON
+                get('1279') + // TA
+                get('42209') + // DOS
+                get('20839') + // IN
+                get('83516') + // FER
+                get('50795') + // NO
+                get('87182') + // GRAN
+                get('26891') + // DE
+                get('61927') + // PRA
+                get('21768') + // CA
+                get('29759') + // CE
+                get('27842');  // TE
 
             document.getElementById('rebites-valor').textContent = '>.< ' + total.toFixed(2).replace('.', ',');
         }
@@ -2457,43 +2457,43 @@ function searchProducts() {
             const get = (cod, mult = 2) => (mapa[cod] || 0) * mult;
 
             const total =
-                get('43326') +       // MEU
-                get('2601219') +     // DE
-                get('26013888') +    // US
-                get('26013889') +    // MEU
-                get('26013890') +    // SE
-                get('43437') +       // NHOR
-                get('26013871', 4) + // MI
-                get('2601023', 4) +  // AJU
-                get('426', 4) +      // DA
-                get('2601209', 4) +  // POR
-                get('26013865', 4) + // FA
-                get('26013866', 4) + // VOR
-                get('26013867', 4) + // E
-                get('765', 4) +      // NA
-                get('2601158', 4) +  // ES
-                get('26013872', 4) + // CO
-                get('26013868', 4) + // NO
-                get('26013869', 4) + // TRA
-                get('26013870', 4) + // BA
-                get('43588', 4) +    // LHO
-                get('2600881', 4) +  // OU
-                get('26013884', 4) + // FA
-                get('26013882', 2) + // CU
-                get('26013873', 2) + // DA
-                get('26013874', 2) + // DE
-                get('26013879', 2) + // ES
-                get('26013875', 2) + // TOU
-                get('26013876', 2) + // VI
-                get('26013880', 2) + // CI
-                get('26013877', 2) + // ADO
-                get('26013878', 2) + // NO
-                get('26013883', 2) + // ZAP
-                get('26013885', 2) + // INS
-                get('26013886', 2) + // TA
-                get('26013887', 2) + // ENO
-                get('26013892', 2) + // FACE
-                get('43848');        // BOOK
+                get('85521') +       // MEU
+                get('95264') +     // DE
+                get('64713') +    // US
+                get('80542') +    // MEU
+                get('73549') +    // SE
+                get('60404') +       // NHOR
+                get('32435', 4) + // MI
+                get('25652', 4) +  // AJU
+                get('40524', 4) +      // DA
+                get('28618', 4) +  // POR
+                get('46684', 4) + // FA
+                get('1279', 4) + // VOR
+                get('42209', 4) + // E
+                get('20839', 4) +      // NA
+                get('83516', 4) +  // ES
+                get('50795', 4) + // CO
+                get('87182', 4) + // NO
+                get('26891', 4) + // TRA
+                get('61927', 4) + // BA
+                get('21768', 4) +    // LHO
+                get('29759', 4) +  // OU
+                get('27842', 4) + // FA
+                get('75911', 2) + // CU
+                get('74354', 2) + // DA
+                get('52372', 2) + // DE
+                get('68733', 2) + // ES
+                get('24177', 2) + // TOU
+                get('22439', 2) + // VI
+                get('13462', 2) + // CI
+                get('1131', 2) + // ADO
+                get('892', 2) + // NO
+                get('747', 2) + // ZAP
+                get('59011', 2) + // INS
+                get('35975', 2) + // TA
+                get('11568', 2) + // ENO
+                get('54955', 2) + // FACE
+                get('60251', 2);     // BOOK
 
             document.getElementById('eletrodos-valor').textContent = '>.< ' + total.toFixed(2).replace('.', ',');
         }
